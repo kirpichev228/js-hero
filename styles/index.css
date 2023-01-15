@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+    transition-duration: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a > h1:hover {
+    color: #876bfd;
+}
+
+a:hover {
+    color: #876bfd;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #17161b;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #17161b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.burger-open,
+.burger-cls {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px black;
+    background-color: #17161b;
+    position: fixed;
+}
+
+.nav-list {
+    display: flex;
+    gap: 25px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 70vw;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 70px;
+}
+
+.description-container {
+    display: flex;
+}
+
+.about-description {
+    font-size: 20px;
+    margin: 100px 0 0px 0;
+}
+
+.description-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: -24px 0;
+    width: 50%;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px;
+    border: 2px solid white;
+    padding: 8px;
+}
+
+.about-me {
+    border: 2px solid white;
+    padding: 8px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-list {
+    font-size: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-item {
+    border: 2px solid #fff;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-image {
+    height: 200px;
+    border: 2px solid #fff;
+}
+
+.portfolio-image:hover {
+    border: 2px solid #876bfd;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.courses-item {
+    font-size: 18px;
+}
+
+.slider-images{
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    overflow-y: hidden;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+}
+.slider-images.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+}
+.slider-images.dragging img{
+    pointer-events: none;
+}
+
+.slider-image {
+    height: 350px;
+    border: 2px solid white;
+}
+
+footer {
+    height: 70px;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 900px) {
+    .carousel img{
+      width: calc(100% / 2);
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .carousel img{
+      width: 100%;
+    }
+  }
+
+@media (max-width: 1200px) {
+    .description-container {
+        flex-direction: column;
+    }
+
+    .description-list {
+        margin: 0;
+    }
+
+    .description-list {
+        width: 100%;
+    }
+
+    .about-me {
+        width: 100%;
+    }
+    
+    h2,
+    .about-courses {
+        text-align: center;
+    }
+
+    h2 {
+        margin: 20px;
+    }
+
+    .skills-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    .burger-open {
+        display: block;
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        background: none;
+        border: none;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    .burger-cls {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        background: none;
+        border: none;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .burger-open:hover,
+    .burger-cls:hover {
+        color: #876bfd;
+    }
+
+    header {
+        position: fixed;
+        height: 100vh;
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 70px;
+        left: -330px;
+    }
+
+    header.active {
+        left: 0;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .burger-open {
+        position: absolute;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .description-list,
+    .about-me {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-image {
+        height: 200px;
+    }
+
+    .portfolio-image {
+        height: 100px;
+    }
+}
